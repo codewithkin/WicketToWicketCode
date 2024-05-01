@@ -4,10 +4,10 @@
 
 @layer components {
 	.heading {
-		@apply text-2xl text-center font-medium;
+		@apply text-2xl text-center font-medium capitalize mb-4;
 	}
 
 	.section {
-		@apply py-20
+		@apply py-20 px-10
 	}
 }
