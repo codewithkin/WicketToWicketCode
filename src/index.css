@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+	.heading {
+		@apply text-2xl text-center font-medium;
+	}
+
+	.section {
+		@apply my-20
+	}
+}
