@@ -8,6 +8,6 @@
 	}
 
 	.section {
-		@apply my-20
+		@apply py-20
 	}
 }
