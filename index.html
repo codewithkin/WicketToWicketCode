@@ -5,10 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WicketToWicket</title>
 
+    <!-- LOrd icons: animated icons, cdn -->
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+	<!-- EmailJS -->
+	<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+	</script>
+	<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "U4uYOKiMDLdn5CEgx",
+      });
+   })();
+</script>
 
 	<!-- Alpine Plugins -->
 	<!-- AlpineJS Collapse -->
@@ -465,6 +480,8 @@ class="font-inter text-black"
       							Full Name
       						</label>
       						<input 
+      						name="name"
+      						id="name"
       						type="text"
       						placeholder="John Doe"
       						class="rounded-lg p-2 outline-none border border-gray-400"
@@ -476,6 +493,8 @@ class="font-inter text-black"
       						Email
       					</label>
       					<input 
+	      					name="email"
+	      					id="email"
       						type="email"
       						placeholder="john@gmail.com"
       						class="rounded-lg px-4 py-2 outline-none border border-gray-400"
@@ -483,10 +502,12 @@ class="font-inter text-black"
       				</article>
 
       				<article class="my-4 grid">
-      					<label htmlFor="first_name">
+      					<label htmlFor="message">
       						Message
       					</label>
       					<textarea 
+      					name="message"
+      					id="message"
       						type="text"
       						placeholder="Leave us a message"
       						class="rounded-lg px-4 py-2 outline-none border border-gray-400"
@@ -516,7 +537,7 @@ class="font-inter text-black"
 
 	      						<a 
 	      						class="underline font-medium"
-	      						href="emailto:kinzinzombe07@gmail.com">
+	      						href="#">
 	      							Shoot us an email
 	      						</a>
 	      					</article>
@@ -544,7 +565,7 @@ class="font-inter text-black"
 
 	      						<a 
 	      						class="underline font-medium"
-	      						href="https://x.com/codewithkin">
+	      						href="#">
 	      							Message us on X
 	      						</a>
 	      					</article>
@@ -565,7 +586,7 @@ class="font-inter text-black"
 
 	      						<a 
 	      						class="underline font-medium"
-	      						href="emailto:kinzinzombe07@gmail.com">
+	      						href="#">
 	      							+1 111 111 1111
 	      						</a>
 	      					</article>
@@ -585,7 +606,7 @@ class="font-inter text-black"
 
 	      						<a 
 	      						class="underline font-medium"
-	      						href="emailto:kinzinzombe07@gmail.com">
+	      						href="#">
 	      							123 Belvedere Lane, Seattle
 	      						</a>
 	      					</article>
@@ -595,8 +616,35 @@ class="font-inter text-black"
       	</section>
     </main>
 
-    <footer class="grid p-4 md:flex justify-between itesm-center">
-        <p class="font-medium">&copy; 2024 Kin Leon Zinzombe. All rights reserved.</p>
+    <footer class="grid bg-blue-700 text-white p-4 md:flex justify-between itesm-center">
+        <p class="font-medium">&copy; 2024 Your Company. All rights reserved.</p>
     </footer>
+
+    <!-- Popup -->
+    <article 
+    class="fixed bg-black/60 backdrop-blur bottom-0 top-0 flex justify-center items-center"
+    id="popup">
+    	<article class="bg-white rounded-md px-4 md:px-32 text-center mx-2 py-4 md:mx-28 lg:mx-40 my-20">
+        <lord-icon
+        src="https://cdn.lordicon.com/kiynvdns.json"
+        trigger="in"
+        style="width:250px;height:250px">
+    </lord-icon>
+
+    		<h2 class="heading mb-0">Success</h2>
+    		<p class="text-gray-600 text-sm">Your email has been received, we will get back to you in 1 to 3 working days</p>
+
+    		<!-- Button to close the popup -->
+    		<button
+    		id="close"
+    		class="bg-black text-white w-full rounded-md py-2  my-4"
+    		>
+    			Close
+    		</button>
+    	</article>
+    </article>
+
+    <script src="./src/main.js">
+    </script>
 </body>
 </html>
