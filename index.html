@@ -186,12 +186,12 @@ class="font-inter text-black"
       		class="grid md:grid-cols-2 gap-8">
       			<template x-for="product in products">
       				<article 
-      				class="grid grid-cols-2 gap-2 rounded-lg">
+      				class="grid md:grid-cols-2 gap-2 rounded-lg">
       					<img 
       					x-bind:src="product.imageUrl"
       					class="rounded-lg"
       					>
-      					<article class="grid items-center px-4">
+      					<article class="grid items-center md:px-4">
       						<article>
 	      						<h2 
 	      						class="text-xl font-semibold"
@@ -517,6 +517,7 @@ class="font-inter text-black"
       					type="submit"
       					class="rounded-lg bg-black text-white font-medium my-4 py-4"
       					>
+                                            <div class="loader hidden"></div>
       						Send message
       					</button>
       				</article>
@@ -616,8 +617,8 @@ class="font-inter text-black"
       	</section>
     </main>
 
-    <footer class="grid bg-blue-700 text-white p-4 md:flex justify-between itesm-center">
-        <p class="font-medium">&copy; 2024 Your Company. All rights reserved.</p>
+    <footer class="grid bg-blue-700 text-white p-4 md:flex justify-between items-center">
+        <p class="font-medium text-sm md:text-xl">&copy; 2024 Kin Leon Zinzombe. All rights reserved.</p>
     </footer>
 
     <!-- Popup -->
